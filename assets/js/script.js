@@ -23,12 +23,26 @@ console.log(str);
 
 // loop-while
 let n = 0;
-
 while (n < 3) {
     n++;
 }
-// event-loop
 
+// do-while
+let text = "";
+let i = 0;
+do {
+    text += i + "<br>";
+    i++;
+}
+while (i < 6);
+document.getElementById("while").innerHTML = text;
+
+// event-loop
+console.log("hello")
+setTimeout(() => {
+      console.log("hello world");
+},);
+console.log("this is just a message")
 // .......................................dom.........................
  
 
@@ -59,6 +73,50 @@ function myFunction() {
     list.add("style");
 }
 // remove
+
+// document query all selector
+const elements = document.querySelectorAll(".p1"); 
+elements.forEach(element => {
+    element.style.backgroundColor = "yellow";
+});
+
+// Auto Inherited Properties
+// Array
+// /filter
+const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+const result = words.filter((word) => word.length > 7);
+console.log(result);
+
+// map
+const array1 = [2, 6, 18, 30];
+const map1 = array1.map((x) => x * 2);
+console.log(map1);
+
+// find
+const array2 = [5, 12, 8, ,42, 130, 44];
+const found = array2.find((element) => element > 44);
+console.log(found);
+
+// every
+const isBelowThreshold = (currentValue) => currentValue < 50;
+const array3 = [1, 30, 39, 29, 10, 13];
+console.log(array3.every(isBelowThreshold));
+
+// for each
+    const array4 = ['a', 'b', 'c'];
+array4.forEach((element) => console.log(element));
+
+// Built-in Objects
+// /math 
+console.log(Math.pow(4, 3));
+console.log(Math.sqrt(25));
+console.log(Math.min(8, 7, 6));
+console.log(Math.max(8, 7, 6));
+console.log(Math.floor(124.45));
+console.log(Math.ceil(124.45));
+console.log(Math.round(124.50));
+console.log(Math.random());
+
 
 
 
